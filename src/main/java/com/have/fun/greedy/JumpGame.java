@@ -1,7 +1,7 @@
 package com.have.fun.greedy;
 
 /**
- * create on 20190102
+ * create on 20191021
  * 贪心算法
  * leetcodeLink: https://leetcode.com/problems/jump-game/
  */
