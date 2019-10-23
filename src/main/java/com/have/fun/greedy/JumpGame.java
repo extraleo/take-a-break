@@ -13,7 +13,8 @@ public class JumpGame {
       if (nums[i] + i > reach)
         reach = nums[i] + i;
     }
-    return reach >= nums.length - 1;
+    // nums.length-1 是当 nums=[0], 的时候
+    return reach >= nums.length-1;
 
   }
 
