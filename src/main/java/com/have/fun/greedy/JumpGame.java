@@ -1,5 +1,7 @@
 package com.have.fun.greedy;
 
+import java.util.Arrays;
+
 /**
  * create on 20191021
  * 贪心算法
@@ -17,6 +19,20 @@ public class JumpGame {
     return reach >= nums.length-1;
 
   }
+
+  public boolean canJumpOther(int[] nums){
+    int[] canGet = new int[nums.length];
+    Arrays.fill(canGet, 0);
+    canGet[0] = 1;
+    for(int i = 0; i < nums.length; ++i){
+      if(canGet[i] == 0) return false;
+      for(int j = 1; j <= nums[i] && j + i < nums.length; ++j){
+        ++canGet[i + j];
+      }
+    }
+    return canGet[canGet.length - 1] > 0;
+  }
+
 
   /**
    * jump game 2
