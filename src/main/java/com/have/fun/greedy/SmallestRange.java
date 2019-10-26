@@ -37,7 +37,7 @@ public class SmallestRange {
         min = A[i];
     }
     for (int i = 0; i < A.length; i++) {
-      if (A[i] <= Max) {
+      if (A[i] <= max) {
         A[i]=A[i]+i;
       }else {
         A[i]=A[i]-i;
