@@ -1,36 +1,16 @@
 package com.have.fun.greedy;
 
+import java.util.Stack;
+
 public class RemoveKDigits {
   public String removeKDigits(String num, int k) {
-    if (num.length() <= k) {
+    if (k == num.length()) {
       return "0";
     }
-    StringBuffer stringBuffer = new StringBuffer();
-    int mn=num.charAt(0);
-    int mnIndex=0;
-    int zeroCun=0;
-    for(int i =1; i<= k;i++){
-      if (num.charAt(i) == 0) {
-        zeroCun++;
-      }
-      if (num.charAt(i) < mn) {
-        mn=num.charAt(i);
-        mnIndex=i;
-      }
+    Stack<Character> stack=new Stack<Character>();
+    int i=0;
+    while (i < num.length()) {
+      while(k>0 )
     }
-    if(zeroCun>0){
-      stringBuffer.append(num.substring(k + zeroCun));
-      System.out.println("first:"+stringBuffer.toString());
-      for(int i=0;i<stringBuffer.length();i++){
-        if(stringBuffer.charAt(i)!=0){
-          return stringBuffer.toString();
-        }
-      }
-      return "0";
-    }
-
-    stringBuffer.append(num.charAt(mnIndex));
-    stringBuffer.append(num.substring(k+1));
-    return stringBuffer.toString();
   }
 }
