@@ -26,11 +26,11 @@ public class RemoveKDigits {
       }
       stack.push(num.charAt(i));
       i++;
-      // "11111"
-      while (k > 0) {
-        stack.pop();
-        k--;
-      }
+    }
+    // "11111"
+    while (k > 0) {
+      stack.pop();
+      k--;
     }
     StringBuilder builder = new StringBuilder();
     while (!stack.isEmpty()) {
